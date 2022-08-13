@@ -1,9 +1,9 @@
 {
 	"name": "ps-list-commonjs",
-	"version": "8.1.1",
+	"version": "8.1.2",
 	"description": "Get running processes",
 	"license": "MIT",
-	"repository": "sindresorhus/ps-list",
+	"repository": "hackermondev/ps-list-commonjs",
 	"funding": "https://github.com/sponsors/sindresorhus",
 	"main": "index.js",
 	"author": {
