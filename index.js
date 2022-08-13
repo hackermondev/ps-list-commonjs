@@ -1,12 +1,12 @@
-const {promisify} = require('node:util');
-const {path} = require('node:path');
-const {fileURLToPath} = require('node:url');
-const childProcess = require('node:child_process');
+const util = require('util');
+const path = require('path');
+const { fileURLToPath } = require('url');
+const childProcess = require('child_process');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TEN_MEGABYTES = 1000 * 1000 * 10;
-const execFile = promisify(childProcess.execFile);
+const execFile = util.promisify(childProcess.execFile);
 
 const windows = async () => {
 	// Source: https://github.com/MarkTiedemann/fastlist
