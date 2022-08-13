@@ -3,8 +3,6 @@ const path = require('path');
 const { fileURLToPath } = require('url');
 const childProcess = require('child_process');
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 const TEN_MEGABYTES = 1000 * 1000 * 10;
 const execFile = util.promisify(childProcess.execFile);
 
