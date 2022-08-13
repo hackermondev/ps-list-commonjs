@@ -1,8 +1,7 @@
-import process from 'node:process';
-import {promisify} from 'node:util';
-import path from 'node:path';
-import {fileURLToPath} from 'node:url';
-import childProcess from 'node:child_process';
+const {promisify} = require('node:util');
+const {path} = require('node:path');
+const {fileURLToPath} = require('node:url');
+const childProcess = require('node:child_process');
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -145,5 +144,4 @@ const nonWindows = async (options = {}) => {
 };
 
 const psList = process.platform === 'win32' ? windows : nonWindows;
-
-export default psList;
+module.exports = psList;
